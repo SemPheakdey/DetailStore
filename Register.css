@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanuman';
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: hsla(0, 0%, 100%, 1);
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 1) 25%, hsla(18, 80%, 61%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 25%, hsla(18, 80%, 61%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 25%, hsla(18, 80%, 61%, 1) 100%);   
+}
+.wrapper{
+    position: relative;
+    max-width:  430px;
+    width: 100%;
+    background-color: #fff;
+    padding: 34px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgb(0,0,0,0.2);
+    margin-right: 23rem;
+}
+.wrapper h2{
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+}
+.wrapper h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background-color: orangered;
+    height: 3px;
+    width: 70px;
+    border-radius: 5px;
+}
+.wrapper form{
+    margin-top: 25px;
+}
+.wrapper form .input__box{
+    height: 52px;
+    margin: 18px 0;
+}
+form .input__box input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid #c7bebe;
+    border-bottom-width: 2.5px;
+    border-radius: 5px;
+    padding: 0px 15px;
+    font-size: 17px;
+    font-weight: 400;
+}
+/* h3{
+    font-size: 18px;
+    margin-top: 10px;
+} */
+.input__box input:focus,
+.input__box input:valid{
+    border-color: orangered
+}
+form .policy{
+    display: flex;
+    align-items: center;
+}
+form .policy h3{
+    color: #707070;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.input__box.button input{
+    color: #fff;
+    letter-spacing: 1px;
+    border: none;
+    background: rgb(255, 91, 32);
+    box-shadow: 6px 6px 0px -1px rgb(121, 119, 119);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.input__box.button input:hover{
+   background: rgb(255, 91, 32);
+   box-shadow: none;
+    transform: translate(1px, 1px);
+}
+form .text h3{
+    color: #333;
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+form .text h3 a{
+    text-decoration: none;
+    color: rgb(240, 92, 38);;
+}
+form .text h3 a:hover{
+    text-decoration: underline;
+}
+.Header-text h1{
+    font-size:  45px;
+    margin-left: 6rem;
+    font-weight: 700;
+    color: orangered;
+}
+.Header-text p{
+    font-size:  20px;
+    margin-left: 7rem;
+    margin-top: 1rem;
+    font-weight: 400;
+    color: rgb(66, 66, 66);
+}
+.Header-text{
+    position: relative;
+    top: -80px;
+}
+
+@keyframes popIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+.Header-text{
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+  
+  /* Apply animation to the .wrapper class */
+.wrapper {
+    animation: popIn 1.50s ease-out;
+  }

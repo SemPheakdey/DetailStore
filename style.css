@@ -1,0 +1,557 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@100;200;300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@100;300;400;700;900&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%; 
+    margin: 0; 
+    height: 410vh;
+
+}
+
+/* Navbar Header */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: rgb(235, 230, 230);
+    font-weight: 600;
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+}
+#header a h2 {
+    font-family: "Kantumruy Pro", sans-serif;   
+    /* font-family: "Hanuman", sans-serif; */
+    color: rgb(228, 87, 35); 
+    cursor: pointer;
+    
+}
+#header .no-underline{
+    text-decoration: none
+}
+
+#nav__bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; 
+    padding: 0; 
+}
+
+#nav__bar li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+#nav__bar li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Hanuman", sans-serif;
+    color: rgb(29, 30, 30);
+    transition: color 0.3s; 
+}
+
+#nav__bar li a::after{
+    content: '';
+    position: absolute;
+    left: 20px;
+    bottom: -7px;
+    width: 40%;
+    height: 2px;
+    background: rgb(228, 87, 35);
+    border-radius: 40px;
+    transform: scalex(0);
+    transform-origin: right;
+    transition: transform .3s;
+}
+
+#nav__bar a:hover::after{
+    transform-origin: left;
+    transform: scale(1);
+    
+}
+#nav__bar li a.active {
+    color: rgb(228, 87, 35); 
+    
+}
+
+/* #nav__bar li a.active::after {
+    content: "";
+    width: 30%;
+    height: 3px;
+    background-color: rgb(228, 87, 35); 
+    position: absolute;
+    bottom: -4px;
+    left: 20%;
+} */
+/* Tile__ header*/
+.Title__header{
+    margin-top: 5rem;
+}
+.Title__header h1{
+    justify-content: center;
+    text-align: center;
+    font-family: 'Hanuman';
+    font-size: 50px;
+    /* margin-top: 3rem; */
+    color: rgb(228, 87, 35); 
+   
+}
+
+.Title__header.animate {
+    animation: popup 0.5s forwards;
+}
+.Title__header.animate {
+    animation: popup 0.5s forwards;
+}
+
+/* Home Page */
+#hero {
+    background-image: url(img/ModelClothes.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-position: right 0;
+    padding: 0 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 99;
+    /* font-family: "Kantumruy Pro", sans-serif; */
+    font-family: "Hanuman", sans-serif;
+    font-size: 20px;
+    
+}
+.overlay{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+#hero h4 {
+    padding-bottom: 20px;
+}
+
+#hero h1 {
+    color: rgb(211, 75, 26);
+    font-size: 50px;
+}
+
+#hero button {
+    background-color: transparent; 
+    color: rgb(241, 78, 78); 
+    border: 2px solid rgb(241, 78, 78); 
+    border-radius: 10px;
+    padding: 10px 20px; 
+    cursor: pointer; 
+    font-weight: 450; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Add a hover effect */
+#hero button:hover {
+    background-color: rgb(245, 58, 58); 
+    color: white;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+#hero button:focus {
+    outline: none; 
+    box-shadow: 0 0 0 4px rgba(241, 78, 78, 0.5); 
+}
+
+/* Add an active effect */
+#hero button:active {
+    transform: scale(0.98); 
+}
+
+button {
+    /* font-family: "Kantumruy Pro", sans-serif; */
+    font-family: "Hanuman", serif;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+#hero h4, #hero h2, #hero h1, #hero p {
+    margin: 7px 0;
+    padding: 0; 
+}
+#hero h4, #hero h2, #hero h1, #hero p, button{
+    opacity: 0; 
+    animation: slideIn 1s forwards;
+}
+#header h2 ,#header li{
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    /* margin-top: 10rem; */
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 90px 60px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 220px;
+    margin-left: 65px;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 10px 0;
+    /* font-family: 'Kantumruy Pro'; */
+    font-family: "Hanuman", serif;
+}
+
+p {
+    /* font-family: 'Kantumruy Pro'; */
+    font-family: "Hanuman", serif;
+    color: #555;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+#feature .fea-box{
+    width:  300px;  
+    text-align: left;
+    padding: 25px 40px;
+    margin-top: 3rem;
+    border: 1px solid rgb(232, 231, 231);
+    border-radius: 5px;
+    margin-left: 6rem;
+    /* Gradient Color */
+    background: hsla(18, 100%, 87%, 1);
+    background: linear-gradient(90deg, hsla(18, 100%, 87%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(18, 100%, 87%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(18, 100%, 87%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    
+    
+}
+.fea-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Add shadow effect on hover */
+}
+
+#feature .icon{
+    font-size: 25px;
+    margin-bottom: 40px;
+    margin-top: 1rem;
+    text-align: center;
+    
+}
+#feature h2{
+    font-size: 30px;
+    text-align: center;
+    color:  rgb(244, 74, 40);
+    font-size: 28px;
+}
+#feature p{
+    margin-top: 2rem;
+    text-align: justify;
+    line-height: 24px;
+}
+
+#feature{
+    display: flex;
+    text-align: center;
+    /* flex-wrap:wrap; */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Optionally, you can add a translateY for a slight slide-in effect */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#feature{
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.hidden{
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(2px);
+    transform: translateX(-100%);
+    
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+.fea-box:nth-child(2){
+    transition-delay: 200ms;
+}
+.fea-box:nth-child(3){
+    transition-delay: 400ms;
+}
+.fea-box:nth-child(4){
+    transition-delay: 600ms;
+}
+/* About us  */
+.About__Text{
+    margin-top: 6rem;
+    text-align: center;
+    font-family: 'Hanuman';
+    font-size: 50px;
+    color: rgb(228, 87, 35); 
+}
+.About__Us{
+    background: hsla(0, 0%, 100%, 1);
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 1) 0%, hsla(18, 83%, 56%, 1) 100%);
+    background: -moz-linear-gradient(180deg, hsla(0, 0%, 100%, 1) 0%, hsla(18, 83%, 56%, 1) 100%);
+    background: -webkit-linear-gradient(180deg, hsla(0, 0%, 100%, 1) 0%, hsla(18, 83%, 56%, 1) 100%);
+    /* border-radius: 5px; */
+    border: 1px solid rgb(220, 217, 217);
+    width: 100%;
+    /* margin-left: 6rem; */
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+.About__Us img{
+    width: 300px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: 6rem;
+    margin-top: 10rem;
+    float: left;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    
+}
+.About__Us img:hover{
+    transform: scale(1.10);
+    /* box-shadow: 0 0 0px rgb(235, 234, 234); Add shadow effect on hover */
+}
+
+#About h3{
+    font-family: 'Hanuman';
+    font-size: 40px;
+    color: rgb(228, 87, 35); 
+
+    
+}
+#About p{
+    font-size: 20px;
+    margin-top: 2rem;
+}
+#About .text{
+    margin-top: 75px;
+    margin-left: 28rem;
+    padding: 0px 50px;  
+    line-height: 35px;
+    /* text-align: justify; */
+}
+.text__detail h4{
+    font-family: 'Hanuman';
+    font-size: 30px;
+    color: rgb(228, 87, 35); 
+    
+}
+.text__detail{
+    margin-left: 28rem;
+    padding: 0px 50px;
+    line-height: 35px;
+    padding-bottom: 50px;
+}
+.btn--learnmore button {
+    padding: 15px;
+    border-radius: 40px;
+    box-shadow: 6px 6px 0px -1px rgba(248, 247, 246, 0.786);
+    border: none;
+    background-color: rgb(255, 92, 33);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn--learnmore button:hover {
+    box-shadow: none;
+    transform: translate(1px, 1px);
+}
+
+#let-talk{
+    padding: 40px ;
+    background-color: rgb(233, 232, 232);
+    margin-top: 7rem;
+    width: 70%;
+    margin-left: 12rem;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 214, 214);
+}
+#let-talk h2{
+    text-align: center;
+    color: black;
+}
+.btn-talk{
+    text-align: center;
+}
+.btn-talk button{
+    padding: 15px;
+    border-radius: 40px;
+    box-shadow: 6px 6px 0px -1px rgb(185, 184, 184);
+    border: none;
+    background-color: rgb(255, 92, 33);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-talk button:hover{
+    box-shadow: none;
+    transform: translate(1px, 1px);
+}
+/* footer */
+#footer__nav{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+    background-color: #F7F7F8;
+    padding: 60px 10%;
+}
+#footer__nav ul{
+    list-style: none;
+    opacity: 0;
+    animation: popup 3s forwards;
+}
+
+#footer__nav ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 3rem;
+    font-family: 'Hanuman';
+    font-size: 18px;
+    color: rgb(3, 3, 3);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+.Menu__link{
+    width: 25%;
+}
+.Menu__link h3{
+    position: relative;
+    margin-bottom: 2rem;
+    font-size: 30px;
+    font-family: 'Hanuman';
+    color: orangered;
+    font-weight: 600;
+    opacity: 0;
+    animation: popup 3s forwards;
+}
+
+.Menu__link h3::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    background-color: orangered;
+    height: 3px;
+    width: 70px;
+    border-radius: 5px;
+
+}
+#footer__nav ul li a:hover{
+    color: orangered;
+}
+.socail i{
+    font-size: 40px;
+    color: black;    
+    opacity: 0;
+    animation: popup 3s forwards;
+    transition: color 0.3s ease;
+
+}
+.socail i:hover{
+    color: orangered;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Optionally, you can add a translateY for a slight slide-in effect */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+hr{
+    width: 100%;
+    margin-top: 3rem;
+    border-radius: 5px;
+}
+.line{
+    padding: 60px 10%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F7F7F8;
+    margin-top: -4rem;
+}
+.footer__last p{
+    font-family: 'Hanuman';
+    color: black;
+}
+.text-contact a{
+    text-decoration: none;
+    padding: 0px 10px;
+    font-family: "Hanuman";
+    color: orangered;
+    transition: color 0.3s ease;
+}
+.text-contact a:hover{
+    color: black;
+}
